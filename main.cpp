@@ -254,7 +254,8 @@ int main(int argc, char *argv[])
                       << ret
                       << ", error=\""
                       << error_code_to_string(ret)
-                      << "\"";
+                      << "\""
+                      << std::endl;
             return 1;
         }
     }
@@ -271,7 +272,8 @@ int main(int argc, char *argv[])
                                                    apFilterGraph.get()); ret < 0)
         {
             std::cerr << "Cannot create buffersink filter - code="
-                      << ret;
+                      << ret
+                      << std::endl;
             return 1;
         }
     }
@@ -292,7 +294,8 @@ int main(int argc, char *argv[])
             std::cerr << "Cannot create format filter (args: "
                       << strArgs
                       << " ) - code="
-                      << ret;
+                      << ret
+                      << std::endl;
             return 1;
         }
     }
@@ -316,7 +319,8 @@ int main(int argc, char *argv[])
             std::cerr << "Cannot create chromakey filter (args: "
                       << pchArgs
                       << " ) - code="
-                      << ret;
+                      << ret
+                      << std::endl;
             return 1;
         }
     }
