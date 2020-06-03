@@ -282,7 +282,7 @@ int main(int argc, char *argv[])
 
     // Format
     {
-        std::string strArgs = "pix_fmts=yuv422p";
+        std::string strArgs = "pix_fmts=yuva422p";
 
         if (int ret = avfilter_graph_create_filter(&pFormatCtx,
                                                    avfilter_get_by_name("format"),
